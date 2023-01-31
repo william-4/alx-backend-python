@@ -42,6 +42,7 @@ class TestAccessNestedMap(unittest.TestCase):
         with self.assertRaises(Exception):
             access_nested_map(nested_map, path)
 
+
 class TestGetJson(unittest.TestCase):
     """
     Class to implement tests for the get_json function
@@ -59,6 +60,7 @@ class TestGetJson(unittest.TestCase):
         result = get_json(test_url)
         self.assertEqual(result, test_payload)
         mock_requests_get.assert_called_once_with(test_url)
+
 
 class TestMemoize(unittest.TestCase):
     """
@@ -81,5 +83,3 @@ class TestMemoize(unittest.TestCase):
             test.a_property()
             test.a_property()
             mock_object.assert_called_once()
-
-
